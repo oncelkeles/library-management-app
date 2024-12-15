@@ -7,14 +7,18 @@ This is a library management application that allows users to borrow and return 
 - **Node.js** (preferably the latest LTS version)
 - **PostgreSQL** database
 
-### 1. Initialize the Database
+### 1. Create Env Variables
+
+Before anything, you should create your own .env file according to the .env.sample file so that the app connects to the database smoothly.
+
+### 2. Initialize the Database
 
 Before running the app, you need to set up the database. You can initialize it by running the `initdb.sql` script.
 
 1. Open your PostgreSQL client (e.g., pgAdmin, psql).
 2. Run the SQL script `initdb.sql` to create the necessary tables and relationships for the app.
 
-### 2. Install Dependencies
+### 3. Install Dependencies
 
 Install the necessary dependencies for the project by running:
 
@@ -38,7 +42,13 @@ npm start
 
 #### Running in Development Mode
 
-To run the app in development mode (with live reload and debugging), use:
+To run the app in development mode (with live reload and debugging), first build locally:
+
+```bash
+npx tsc
+```
+
+Then start the server locally:
 
 ```bash
 npm run dev
