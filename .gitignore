@@ -1,0 +1,19 @@
+.idea/
+.vscode/
+node_modules/
+tmp/
+temp/
+
+# OS
+.DS_Store
+
+# compiled output & production
+dist/
+build/
+
+# env files
+.env
+.env.dev
+
+# eslint
+.eslintcache
