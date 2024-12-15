@@ -28,22 +28,29 @@ CREATE TABLE
             score >= 0
             AND score <= 10
         ), -- Ensure score is between 0 and 10
-        borrowed_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW (), -- Borrow date
-        returned_at TIMESTAMP WITH TIME ZONE -- Return date
+        borrowed_at TIMESTAMP
+        WITH
+            TIME ZONE NOT NULL DEFAULT NOW (), -- Borrow date
+            returned_at TIMESTAMP
+        WITH
+            TIME ZONE -- Return date
     );
 
 -- Insert initial data into users
 INSERT INTO
     users (name)
 VALUES
-    ('John Doe'),
-    ('Jane Doe'),
-    ('Okur Yazar');
+    ('Eray Aslan'),
+    ('Enes Faruk Meniz'),
+    ('Sefa Eren Şahin'),
+    ('Kadir Mutlu');
 
 -- Insert initial data into books
 INSERT INTO
     books (name)
 VALUES
-    ('Miras'),
-    ('Postane Günlükleri'),
-    ('Kapı');
+    ('The Hitchhiker''s Guide to the Galaxy'),
+    ('I, Robot'),
+    ('Dune'),
+    ('1984'),
+    ('Brave New World');
